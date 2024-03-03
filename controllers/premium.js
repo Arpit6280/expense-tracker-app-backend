@@ -24,7 +24,7 @@ exports.download = async (req, res, next) => {
   try {
     // const expenses = await req.user.getExpenses();
     const expenses = await UserServices.getExpenses(req);
-    // console.log(expenses);
+
     const stringifiedExpenses = JSON.stringify(expenses);
     const userId = req.user.id;
 

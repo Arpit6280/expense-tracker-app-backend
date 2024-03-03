@@ -5,12 +5,11 @@ const User = require("../model/User");
 const { Op } = require("sequelize");
 
 exports.getExpenses = (req, res, next) => {
-  // req.user.getExpenses()
+ 
   let page = Number(req.query.pages);
   let EXPENSE_PER_PAGE = Number(req.query.expensePerPage);
   console.log(EXPENSE_PER_PAGE);
 
-  // let EXPENSE_PER_PAGE = 2;
   let totalExpenses;
   console.log("page", page);
   Expense.count()
